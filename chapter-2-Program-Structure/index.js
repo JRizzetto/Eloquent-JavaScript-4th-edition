@@ -109,9 +109,27 @@
 //program, which finds the first number that is both greater than or
 // equal to 20 and divisible by 7:
 
-for (let current = 15; ; current = current + 1) {
-  if (current % 7 === 0) {
-    console.log(current);
+// for (let current = 15; ; current = current + 1) {
+//   if (current % 7 === 0) {
+//     console.log(current);
+//     break;
+//   }
+// }
+// // → 21
+
+let weather = "ola";
+
+switch (weather) {
+  case "rain":
+    console.log("Don't forget umbrella");
     break;
-  }
+  case "sunny":
+    console.log("Put a light dresses");
+    break;
+  case "cloudy":
+    console.log("Go outside.");
+    break;
+  default:
+    console.log("Unknow weather type!");
+    break;
 }
