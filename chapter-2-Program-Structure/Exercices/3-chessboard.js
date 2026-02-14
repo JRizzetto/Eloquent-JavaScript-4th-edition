@@ -20,17 +20,42 @@ Rules:
 - The pattern must alternate like a real chessboard
 */
 
+// let control = "";
+
+// for (let x = 1; x <= 8; x++) {
+//   for (let y = 1; y <= 8; y++) {
+//     if (x % 2 !== 0) {
+//       if (y % 2 === 0) control += "#";
+//       if (y % 2 !== 0) control += " ";
+//     } else {
+//       if (y % 2 !== 0) control += "#";
+//       if (y % 2 === 0) control += " ";
+//     }
+//   }
+//   control += "\n";
+// }
+
+// console.log(control);
+
+// let control = "";
+
+// for (let x = 1; x <= 8; x++) {
+//   for (let y = 1; y <= 8; y++) {
+//     if ((x + y) % 2 === 0) {
+//       control += "#";
+//     } else {
+//       control += " ";
+//     }
+//   }
+//   control += "\n";
+// }
+// console.log(control);
+
 let control = "";
 
 for (let x = 1; x <= 8; x++) {
   for (let y = 1; y <= 8; y++) {
-    if (x % 2 !== 0) {
-      if (y % 2 === 0) control += "#";
-      if (y % 2 !== 0) control += " ";
-    } else {
-      if (y % 2 !== 0) control += "#";
-      if (y % 2 === 0) control += " ";
-    }
+    control += (x + y) % 2 === 0 ? "#" : " ";
   }
   control += "\n";
 }
