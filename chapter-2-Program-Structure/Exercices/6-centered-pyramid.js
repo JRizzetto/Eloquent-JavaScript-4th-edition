@@ -37,19 +37,33 @@ If you already know .repeat(), you can use it, but I recommend loops for muscle 
 
 */
 
+// let board = "";
+// let height = 5;
+
+// for (let x = 1; x <= 5; x++) {
+//   for (let y = height; y >= 1; y--) {
+//     if (y <= x) {
+//       for (let z = 1; z <= 2 * x - 1; z++) {
+//         board += "*";
+//       }
+//       y = 0;
+//     } else {
+//       board += " ";
+//     }
+//   }
+//   board += "\n";
+// }
+
+// console.log(board);
+
 let board = "";
 let height = 5;
 
-for (let x = height; x >= 1; x--) {
-  for (let y = 1; y <= height; y++) {
-    if (y >= x) {
-      for (let z = 1; z <= 2 * y - 1; z++) {
-        board += "*";
-      }
-    } else {
-      board += " ";
-    }
-  }
+for (let x = 1; x <= height; x++) {
+  for (let y = 1; y <= height - x; y++) board += " ";
+
+  for (let z = 1; z <= 2 * x - 1; z++) board += "*";
+
   board += "\n";
 }
 
