@@ -16,7 +16,11 @@ let board = "";
 let height = 5;
 
 for (let x = 1; x <= height; x++) {
-  for (let y = 1; y >= height - x; y++) {
+  for (let y = height; height - x; y--) {
     board += " ";
   }
+
+  board += "\n";
 }
+
+console.log(board);
