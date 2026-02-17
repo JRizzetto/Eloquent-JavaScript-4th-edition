@@ -12,15 +12,23 @@ Exemplo:
 
 */
 
-let board = "";
+let result = "";
 let height = 5;
 
-for (let x = 1; x <= height; x++) {
-  for (let y = height; height - x; y--) {
-    board += " ";
-  }
+let half = Math.ceil(height / 2); // metade de cima (inclui o meio)
 
-  board += "\n";
+// Top half (1..half)
+for (let x = 1; x <= half; x++) {
+  for (let s = 1; s <= half - x; s++) result += " ";
+  for (let st = 1; st <= 2 * x - 1; st++) result += "*";
+  result += "\n";
 }
 
-console.log(board);
+// Bottom half (half-1..1)
+for (let x = half - 1; x >= 1; x--) {
+  for (let s = 1; s <= half - x; s++) result += " ";
+  for (let st = 1; st <= 2 * x - 1; st++) result += "*";
+  result += "\n";
+}
+
+console.log(result);
