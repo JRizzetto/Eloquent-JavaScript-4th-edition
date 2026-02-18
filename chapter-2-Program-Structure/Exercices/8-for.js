@@ -192,3 +192,35 @@ Input a number to find the last prime number occurs before the number: 50
 // console.log(
 //   `${primeArray[primeArray.length - 1]} is the last prime number before ${inputNumber}`,
 // );
+
+/*
+9. Find the Greatest Common Divisor (GCD) of Two Numbers
+
+Write a program in C++ to find the Greatest Common Divisor (GCD) of two numbers.
+
+Sample Output:
+Input the first number: 25
+Input the second number: 15
+The Greatest Common Divisor is: 5
+*/
+
+let firstInput = 28;
+let secondInput = 7;
+let divisors = 0;
+
+for (let i = firstInput; i > 0; i--) {
+  if (firstInput % i === 0 && firstInput !== i) {
+    divisors += i;
+    break;
+  }
+}
+
+for (let i = 1; i <= secondInput; i++) {
+  if (secondInput % i === 0) {
+    if (i === divisors) {
+      console.log(`Input the first number: ${firstInput}`);
+      console.log(`Input the second number: ${secondInput}`);
+      console.log(`The Greatest Common Divisor is: ${divisors}`);
+    }
+  }
+}
