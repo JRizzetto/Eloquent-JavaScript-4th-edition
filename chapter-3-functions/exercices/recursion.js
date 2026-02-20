@@ -14,6 +14,10 @@ of a way to fix this?
 */
 
 function isEven(number) {
-  function whole(number, step) {}
-  whole(4.5);
+  if (number < 0) return isEven(-n);
+  if (number === 0) return true;
+  if (number === 1) return false;
+  return isEven(number - 2);
 }
+
+console.log(isEven(50));
