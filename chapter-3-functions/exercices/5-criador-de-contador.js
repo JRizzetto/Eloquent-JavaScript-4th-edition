@@ -12,14 +12,20 @@ A função retornada deve:
 */
 
 function createCounter() {
-  return result();
-}
+  let counter = 0;
 
-function result() {
-  let number = 0;
-  number++;
-  return number;
+  return function () {
+    counter++;
+    return counter;
+  };
 }
 
 const counter = createCounter();
-counter();
+console.log("Counter -> " + counter());
+console.log("Counter -> " + counter());
+
+const counter2 = createCounter();
+console.log("Counter2 -> " + counter2());
+console.log("Counter2 -> " + counter2());
+
+console.log("Counter -> " + counter());
